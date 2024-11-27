@@ -20,6 +20,9 @@ db.query("SELECT 1 + 1 AS result", (err, results) => {
 
 app.use("/api", schoolRoutes);
 
+app.get('/',(req,res)=>{
+  res.send('api is running')
+})
 const PORT = process.env.PORT || 5003;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
