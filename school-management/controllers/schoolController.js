@@ -1,6 +1,6 @@
 const db = require("../config/db");
 
-exports.addSchool = (req, res) => {
+const addSchool = (req, res) => {
   const { name, address, latitude, longitude } = req.body;
 
  
@@ -27,7 +27,7 @@ exports.addSchool = (req, res) => {
 };
 
 
-exports.listSchools = (req, res) => {
+const listSchools = (req, res) => {
   const { latitude, longitude } = req.query;
 
 
@@ -79,3 +79,5 @@ exports.listSchools = (req, res) => {
     res.status(200).json(sortedSchools);
   });
 };
+
+module.exports={addSchool,listSchools}
