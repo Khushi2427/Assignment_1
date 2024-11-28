@@ -4,7 +4,7 @@ const schoolRoutes = require("./routes/schoolRoutes");
 const db = require("./config/db");
 
 const app = express();
-
+app.set("view engine",'ejs')
 
 app.use(express.json()); 
 
@@ -21,7 +21,7 @@ db.query("SELECT 1 + 1 AS result", (err, results) => {
 
 
 app.get('/',(req,res)=>{
-  res.send('api is running')
+  res.render('index')
 })
 
 app.use("/api", schoolRoutes);
