@@ -25,7 +25,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use("/api", schoolRoutes);
-const PORT = process.env.PORT || 5003;
+const PORT =5003;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
